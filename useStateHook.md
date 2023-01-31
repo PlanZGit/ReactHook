@@ -23,6 +23,8 @@
    - Call them from within React functional components and
      not just any regular JavaScript function
 
+## Codes
+
 ### 1. HookCounter vs ClassCounter
 
 _HookCounter.js_

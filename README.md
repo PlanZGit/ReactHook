@@ -1,26 +1,16 @@
-# ReactHook
-
-## Quick Notes
-
-1. React Shortcuts
-   - rce - create a class component
-   - rconst - create a state var
-   - rfce - create a functional component
-2. useState
-   - import React, { useState } from "react";
-   - const [count, setCount] = useState(0);
-   - use prevState, when updating state value based on previous value
-   - ( setCount((prevCount) => prevCount + 1) )
-   - use spread operator, copy every property in the object/array then only update field to new value
-   - onChange={(e) => setName({ ...name, lastName: e.target.value })}
-
-## Summary
+# ReactHook Summary
 
 - Hooks are a new feature addition in React 16.8
 - They allow you to use React features without having to write a class
 - Avoid the whole confusion with 'this' keyword
 - Allow you to reuse stateful logic
 - Organize the logic inside a component into reusable isolated units
+
+## Quick Notes
+
+- import React, { useState, useEffect } from "react";
+- useState : const [count, setCount] = useState(0);
+- useEffect : replacement for componentDidMount, componentDidUpdate, componentWillUnmount
 
 ## Introduction
 
