@@ -1,19 +1,22 @@
 # useState Hook
 
-### video notes - 2,3
+## Summary - useState
 
-1. React Shortcuts
+- The useState hook lets you add state to functional components
+- In classes, the state is alwalys an object
+- With the useState hook, the state doesn't have to be an object
+- The useState hook returns an array with 2 elements
+- the first element is the current value of the state, and the second element is the state setter function.
+- If new state value depends on the previous state value, pass a function to the setter function
+- When dealing with objects or arrays, always make sure to spread your state vaiable and then call the setter function
 
-   - rce - create a class component
-   - rconst - create a state var
-   - rfce - create a functional component
+## Notes
 
-2. Syntax
+1. Syntax
 
-   - Array destructuring a feature in ES6
-   - const [count, setCount] = useState(0)
+   - Array destructuring a feature in ES6 - const [count, setCount] = useState(0)
 
-3. Rules of Hook
+2. Rules of Hook
    - "Only Call Hooks at the Top Level"
    - Don't call Hooks inside loops, conditions, or nested functions
    - "Only Call Hooks from React Functions"
