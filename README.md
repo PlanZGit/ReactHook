@@ -11,7 +11,7 @@
    - const [count, setCount] = useState(0);
    - use prevState, when updating state value based on previous value
    - ( setCount((prevCount) => prevCount + 1) )
-   - use spread operator, copy every property in the obj then only update field to new value
+   - use spread operator, copy every property in the object/array then only update field to new value
    - onChange={(e) => setName({ ...name, lastName: e.target.value })}
 
 ## Summary
