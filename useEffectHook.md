@@ -23,7 +23,7 @@ _HookCounterOne.js_
           // replace componentDidMount , componentDidUpdate
           // pass in array in second parameter with value, only updates when value changes
 
-### Run useEffect only once
+### useEffect run only once
 
 _HookMouse.js_
 
