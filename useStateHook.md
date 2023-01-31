@@ -92,6 +92,8 @@ _HookCounterTwo.js_
 
 The setter function provided by the useState Hook does not automatically merge and update objects <br> you have to manually merge it yourself then pass the value to the setter function
 
+_HookCounterThree.js_
+
     import React, { useState } from "react";
     function HookCounterThree() {
       const [name, setName] = useState({ firstName: "", lastName: "" });
@@ -107,7 +109,6 @@ The setter function provided by the useState Hook does not automatically merge a
             value={name.lastName}
             onChange={(e) => setName({ ...name, lastName: e.target.value })}
           ></input>
-
           <h2>Your first name is - {name.firstName}</h2>
           <h2>Your last name is - {name.lastName}</h2>
           <h2>{JSON.stringify(name)}</h2>
@@ -115,3 +116,32 @@ The setter function provided by the useState Hook does not automatically merge a
       );
     }
     export default HookCounterThree;
+
+### 4. useState with array
+
+use spread operator
+created a list using the length of the object as the key value
+
+_HookCounterFour.js_
+
+    import React, { useState } from "react";
+    function HookCounterFour() {
+      const [items, setItems] = useState([]);
+      const addItem = () => {
+        setItems([
+          ...items,
+          { id: items.length, value: Math.floor(Math.random() * 10) + 1 },
+        ]);
+      };
+      return (
+        <div>
+          <button onClick={addItem}>Add a number</button>
+          <ul>
+            {items.map((item) => (
+              <li key={item.id}>{item.value}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+    export default HookCounterFour;
