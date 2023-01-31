@@ -87,3 +87,7 @@ _HookCounterTwo.js_
         );
       }
       export default HookCounterTwo;
+
+### 3. useState with object
+
+The setter function provided by the useState Hook does not automatically merge and update objects <br> you have to manually merge it yourself then pass the value to the setter function
