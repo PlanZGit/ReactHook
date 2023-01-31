@@ -1,5 +1,16 @@
 # ReactHook
 
+## Quick Notes
+
+1. React Shortcuts
+   - rce - create a class component
+   - rconst - create a state var
+   - rfce - create a functional component
+2. useState
+   - import React, { useState } from "react";
+   - const [count, setCount] = useState(0);
+   - use prevState, when updating state value based on previous value
+
 ## Summary
 
 - Hooks are a new feature addition in React 16.8

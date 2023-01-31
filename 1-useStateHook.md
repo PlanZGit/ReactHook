@@ -1,5 +1,7 @@
 # useState Hook
 
+### video notes - 2,3
+
 1. React Shortcuts
 
    - rce - create a class component
@@ -9,7 +11,7 @@
 2. Syntax
 
    - Array destructuring a feature in ES6
-     const [count, setCount] = useState(0)
+   - const [count, setCount] = useState(0)
 
 3. Rules of Hook
    - "Only Call Hooks at the Top Level"
@@ -18,7 +20,7 @@
    - Call them from within React functional components and
      not just any regular JavaScript function
 
-### Example
+### 1. HookCounter vs ClassCounter
 
 _HookCounter.js_
 
@@ -55,3 +57,33 @@ _ClassCounter.js_
           }
         }
         export default ClassCounter;
+
+### 2. useState with previoues state
+
+_HookCounterTwo.js_
+
+      import React, { useState } from "react";
+      function HookCounterTwo() {
+        const initialCount = 0;
+        const [count, setCount] = useState(0);
+
+        const incrementFive = () => {
+          for (let i = 0; i < 5; i++) {
+            setCount((prevCount) => prevCount + 1);
+          }
+        };
+        return (
+          <div>
+            Count{count}
+            <button onClick={() => setCount(initialCount)}>Reset</button>
+            <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+              increment
+            </button>
+            <button onClick={() => setCount((prevCount) => prevCount - 1)}>
+              decrement
+            </button>
+            <button onClick={incrementFive}>incrementFive</button>
+          </div>
+        );
+      }
+      export default HookCounterTwo;
