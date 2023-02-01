@@ -11,8 +11,9 @@ function ComponentF() {
               {(channel) => {
                 return (
                   <>
-                    <div>User context value {user} </div>
-                    <div>Channel {channel}</div>
+                    Context {user} - {channel}
+                    {/* <div>User context value {user} </div>
+                    <div>Channel {channel}</div> */}
                   </>
                 );
               }}
