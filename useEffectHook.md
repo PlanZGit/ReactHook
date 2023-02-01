@@ -13,6 +13,15 @@
 - sometimes when we useEffect call a function, it is best to define it inside useEffect
 - Multiple useEffect - if we have mutil effects to run, just use two useEffect and separate them inside the component
 
+- Data Fetching using axios
+
+      axios.get('https://jsonplaceholder.typicode.com/posts')
+        - get request returns a response
+      .then((res) => { console.log(res); setPosts(res.data);})
+        - then response data
+      .catch((err) => {console.log(err);});
+        - throw catch error
+
 ### useEffect conditional
 
 _HookCounterOne.js_
@@ -52,3 +61,33 @@ _HookMouse.js_
         }, []);
 
         // replace componentWillUnmount
+
+### useEffect DataFetching
+
+_DataFetching.js_
+
+        useEffect(() => {
+          axios
+            .get(`https://jsonplaceholder.typicode.com/posts/${idFromButtonClick}`)
+            .then((res) => {
+              console.log(res);
+              setPost(res.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }, [idFromButtonClick]);
+
+          return (
+          <div>
+            <input
+              type="text"
+              value={id}
+              onChange={(e) => setId(e.target.value)}
+            ></input>
+            <button type="button" onClick={handleClick}>
+              Fetch Post
+            </button>
+            <div>{post.title}</div>
+          </div>
+        );
