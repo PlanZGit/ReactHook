@@ -10,6 +10,8 @@
 - useEffect runs after every render of the component
 - use conditional to run useEffect, for performance problem
 - useEffect will return a function which will be executed when the component will unmount
+- sometimes when we useEffect call a function, it is best to define it inside useEffect
+- Multiple useEffect - if we have mutil effects to run, just use two useEffect and separate them inside the component
 
 ### useEffect conditional
 
