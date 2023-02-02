@@ -12,6 +12,7 @@
 - useState : const [count, setCount] = useState(0);
 - useEffect : replacement for componentDidMount, componentDidUpdate, componentWillUnmount
 - useContext : passing data to components
+- useReducer : state management, useReducerHook.md READ!
 
 ## Hooks
 

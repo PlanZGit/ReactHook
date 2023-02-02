@@ -6,22 +6,22 @@
 - reducer(currentState, action)
 - useReducer is basicly changing the state of React components
 
-## Intro
-
 Whats the difference?
 
 - useState is built using useReducer
 
 ## reduce in JavaScript & useReduce in React
 
-    array.reduce(reducer,initialValue) //JS
-    useReducer(reducer,initialValue) //React
+- array.reduce(reducer,initialValue) //JS
+- useReducer(reducer,initialValue) //React
 
-    singleValue = reducer(accumulator, itemValue) //JS
-    newState = reducer(currentState, action) //React
+- singleValue = reducer(accumulator, itemValue) //JS
+- newState = reducer(currentState, action) //React
 
-    // reduce method returns a single value
-    // useReducer returns a pair of values [newState, dispatch]
+- reduce method returns a single value
+- useReducer returns a pair of values [newState, dispatch]
+
+# Local State managemant
 
 ## useReducer simple state & action
 
@@ -94,7 +94,130 @@ scenario 2 - State as a object
         }
       };
 
-## other notes
+## Multiple useReducer
+
+- When dealing with multiple variables that have the same state transition
+  it is a good idea to use the same reducer
+  -This will avoid the complexity of merging the state if it were an object
+- This also prevent us from duplicating code in _CounterTwo.js_
+
+_CounterThree.js_
+
+    import React, { useReducer } from "react";
+    const initialState = 0;
+    const reducer = (state, action) => {
+      switch (action) {
+        case "increment":
+          return state + 1;
+        case "decrement":
+          return state - 1;
+        case "reset":
+          return initialState;
+        default:
+          return state;
+      }
+    };
+
+    function CounterThree() {
+      const [count, dispatch] = useReducer(reducer, initialState);
+      const [countTwo, dispatchTwo] = useReducer(reducer, initialState);
+
+      return (
+        <div>
+          <div>Count - {count}</div>
+          <button onClick={() => dispatch("increment")}>Increment</button>
+          <button onClick={() => dispatch("decrement")}>Decrement</button>
+          <button onClick={() => dispatch("reset")}>Reset</button>
+          <div>
+            <div>CountTwo - {countTwo}</div>
+            <button onClick={() => dispatchTwo("increment")}>Increment</button>
+            <button onClick={() => dispatchTwo("decrement")}>Decrement</button>
+            <button onClick={() => dispatchTwo("reset")}>Reset</button>
+          </div>
+        </div>
+      );
+    }
+
+    export default CounterThree;
+
+# Global State managemant
+
+## useReducer with useContext
+
+- useReducer - Loacal state management
+- Share state between components - Global state management
+- useReducer + useContext
+
+      Examples of nested conponents
+      App.js > HookComponentA.js
+      App.js > HookComponentB.js > D.js
+      App.js > HookComponentC.js > E.js > F.js
+
+      // Passing data to A,D,F with useContext
+
+### Step 1:
+
+- Create useReducer
+
+      const initialState = 0;
+      const reducer = (state, action) => {
+        switch (action) {
+          case "increment":
+            return state + 1;
+          case "decrement":
+            return state - 1;
+          case "reset":
+            return initialState;
+          default:
+            return state;
+        }
+      };
+
+      const [count, dispatch] = useReducer(reducer, initialState);
+
+### Step 2:
+
+- Create useContext
+
+      export const CountContext = React.createContext();
+
+      <CountContext.Provider
+        value={{ countState: count, countDispatch: dispatch }}
+      >
+        <div>
+          Count: {count}
+          <HookComponentA />
+          <HookComponentB />
+          <HookComponentC />
+        </div>
+      </CountContext.Provider>
+
+- Consume useContext
+
+  _HookComponentA.js_
+
+      import React, { useContext } from "react";
+      import { CountContext } from "../App";
+
+      function HookComponentA() {
+        const countContext = useContext(CountContext);
+        return (
+          <div>
+            HookComponentA
+            <button onClick={() => countContext.countDispatch("increment")}>
+              Increment
+            </button>
+            <button onClick={() => countContext.countDispatch("decrement")}>
+              Decrement
+            </button>
+            <button onClick={() => countContext.countDispatch("reset")}>Reset</button>
+          </div>
+        );
+      }
+
+      export default HookComponentA;
+
+# Other notes
 
 Array.prototype.reduce()
 
