@@ -11,6 +11,14 @@
 - import React, { useState, useEffect } from "react";
 - useState : const [count, setCount] = useState(0);
 - useEffect : replacement for componentDidMount, componentDidUpdate, componentWillUnmount
+- useContext : passing data to components
+
+## Hooks
+
+    useState - state
+    useEffect - side effects
+    useContext - context API
+    useReducer - reducers
 
 ## Introduction
 
