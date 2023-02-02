@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 // import ComponentC from "./components/ComponentC";
-import CounterOne from "./components/CounterOne";
+// import CounterOne from "./components/CounterOne";
+import CounterTwo from "./components/CounterTwo";
 // import DataFetching from "./components/DataFetching";
 // import MouseContainer from "./components/MouseContainer";
 // import ClassCounterOne from "./components/ClassCounterOne";
@@ -40,7 +41,8 @@ function App() {
           <ComponentC />
         </ChannelContext.Provider>
       </UserContext.Provider> */}
-      <CounterOne />
+      {/* <CounterOne /> */}
+      <CounterTwo />
     </div>
   );
 }
