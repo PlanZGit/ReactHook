@@ -14,12 +14,9 @@
 - useContext : passing data to components
 - useReducer : state management, useReducerHook.md READ!
 
-## Hooks
+# useState vs useReducer
 
-    useState - state
-    useEffect - side effects
-    useContext - context API
-    useReducer - reducers
+![This is an image](/useStateVSuseReducer.bmp)
 
 ## Introduction
 
