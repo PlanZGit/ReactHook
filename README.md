@@ -13,6 +13,8 @@
 - useEffect : replacement for componentDidMount, componentDidUpdate, componentWillUnmount
 - useContext : passing data to components
 - useReducer : state management, useReducerHook.md READ!
+- useCallBack : used to optimize performance
+- useMemo : used to optimize performance
 
 # useState vs useReducer
 
