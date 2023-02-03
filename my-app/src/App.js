@@ -1,7 +1,8 @@
 // import React, { useReducer } from "react";
 import "./App.css";
-import DataFetchingOne from "./components/DataFetchingOne";
-import DataFetchingTwo from "./components/DataFetchingTwo";
+import Counter from "./components/Counter";
+// import DataFetchingOne from "./components/DataFetchingOne";
+// import DataFetchingTwo from "./components/DataFetchingTwo";
 // import HookComponentA from "./components/HookComponentA";
 // import HookComponentB from "./components/HookComponentB";
 // import HookComponentC from "./components/HookComponentC";
@@ -79,8 +80,10 @@ function App() {
         </div>
       </CountContext.Provider> */}
 
-      <DataFetchingOne />
-      <DataFetchingTwo />
+      {/* <DataFetchingOne />
+      <DataFetchingTwo /> */}
+
+      <Counter />
     </div>
   );
 }
