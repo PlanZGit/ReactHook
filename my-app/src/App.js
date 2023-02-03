@@ -1,8 +1,10 @@
 import React, { useReducer } from "react";
 import "./App.css";
-import HookComponentA from "./components/HookComponentA";
-import HookComponentB from "./components/HookComponentB";
-import HookComponentC from "./components/HookComponentC";
+import DataFetchingOne from "./components/DataFetchingOne";
+import DataFetchingTwo from "./components/DataFetchingTwo";
+// import HookComponentA from "./components/HookComponentA";
+// import HookComponentB from "./components/HookComponentB";
+// import HookComponentC from "./components/HookComponentC";
 // import CounterThree from "./components/CounterThree";
 // import ComponentC from "./components/ComponentC";
 // import CounterOne from "./components/CounterOne";
@@ -24,23 +26,23 @@ import HookComponentC from "./components/HookComponentC";
 // export const UserContext = React.createContext();
 // export const ChannelContext = React.createContext();
 
-export const CountContext = React.createContext();
-const initialState = 0;
-const reducer = (state, action) => {
-  switch (action) {
-    case "increment":
-      return state + 1;
-    case "decrement":
-      return state - 1;
-    case "reset":
-      return initialState;
-    default:
-      return state;
-  }
-};
+// export const CountContext = React.createContext();
+// const initialState = 0;
+// const reducer = (state, action) => {
+//   switch (action) {
+//     case "increment":
+//       return state + 1;
+//     case "decrement":
+//       return state - 1;
+//     case "reset":
+//       return initialState;
+//     default:
+//       return state;
+//   }
+// };
 
 function App() {
-  const [count, dispatch] = useReducer(reducer, initialState);
+  // const [count, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div className="App">
@@ -66,7 +68,7 @@ function App() {
       {/* <CounterTwo /> */}
       {/* <CounterThree /> */}
 
-      <CountContext.Provider
+      {/* <CountContext.Provider
         value={{ countState: count, countDispatch: dispatch }}
       >
         <div>
@@ -75,7 +77,10 @@ function App() {
           <HookComponentB />
           <HookComponentC />
         </div>
-      </CountContext.Provider>
+      </CountContext.Provider> */}
+
+      <DataFetchingOne />
+      <DataFetchingTwo />
     </div>
   );
 }
