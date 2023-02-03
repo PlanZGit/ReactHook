@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+// import React, { useReducer } from "react";
 import "./App.css";
 import DataFetchingOne from "./components/DataFetchingOne";
 import DataFetchingTwo from "./components/DataFetchingTwo";
