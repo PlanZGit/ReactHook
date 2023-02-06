@@ -1,5 +1,13 @@
 # useRef
 
+- refs are useful for accessing dom element and presisting value across renders without rerendering
+
+      const countRef = useRef(0);
+
+      // think of ref as a object with a current property
+      // useRef = { currect : 0 }
+      // we can ref elements in the dom or prevState
+
 ## First common use cases
 
 - focus on input text

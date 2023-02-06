@@ -87,9 +87,10 @@ function App() {
       <DataFetchingTwo /> */}
 
       {/* <Counter /> */}
-      <FocusInput />
+
+      {/* <FocusInput />
       <ClassTimer />
-      <HookTimer />
+      <HookTimer /> */}
     </div>
   );
 }

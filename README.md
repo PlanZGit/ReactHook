@@ -17,9 +17,9 @@
 - useMemo : used to optimize performance
 - useRef : focus on input, hold a mutable value
 
-        -use imperative handle
-        -use layout effect
-        -use debug value
+        -use imperative handle : useRef related
+        -use layout effect : runs before render : synchronously
+        -use debug value : display custom hook in devTools
 
 # useState vs useReducer
 
