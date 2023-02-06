@@ -15,6 +15,11 @@
 - useReducer : state management, useReducerHook.md READ!
 - useCallBack : used to optimize performance
 - useMemo : used to optimize performance
+- useRef : focus on input, hold a mutable value
+
+        -use imperative handle
+        -use layout effect
+        -use debug value
 
 # useState vs useReducer
 
