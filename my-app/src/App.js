@@ -1,8 +1,13 @@
 // import React, { useReducer } from "react";
 import "./App.css";
-import ClassTimer from "./components/ClassTimer";
-import FocusInput from "./components/FocusInput";
-import HookTimer from "./components/HookTimer";
+// import ClassTimer from "./components/ClassTimer";
+import CounterHookOne from "./components/CounterHookOne";
+import CounterHookTwo from "./components/CounterHookTwo";
+import DocTitleOne from "./components/DocTitleOne";
+import DocTitleTwo from "./components/DocTitleTwo";
+import UserForm from "./components/UserForm";
+// import FocusInput from "./components/FocusInput";
+// import HookTimer from "./components/HookTimer";
 // import Counter from "./components/Counter";
 // import DataFetchingOne from "./components/DataFetchingOne";
 // import DataFetchingTwo from "./components/DataFetchingTwo";
@@ -91,6 +96,12 @@ function App() {
       {/* <FocusInput />
       <ClassTimer />
       <HookTimer /> */}
+
+      <DocTitleOne />
+      <DocTitleTwo />
+      <CounterHookOne />
+      <CounterHookTwo />
+      <UserForm />
     </div>
   );
 }

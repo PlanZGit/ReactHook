@@ -16,6 +16,7 @@
 - useCallBack : used to optimize performance
 - useMemo : used to optimize performance
 - useRef : focus on input, hold a mutable value
+- customHooks : Reusing logic instead of duplicating
 
         -use imperative handle : useRef related
         -use layout effect : runs before render : synchronously
